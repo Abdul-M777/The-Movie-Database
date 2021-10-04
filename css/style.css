@@ -1,0 +1,167 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: rgb(66, 66, 253);
+    color: white;
+}
+
+header h1 {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+footer#copyright {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px 0px;
+    color: white;
+    background-color: rgb(66, 66, 253);
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: transparent;
+    color: grey;
+    border: none;
+  }
+
+  .modal-title {
+    margin: 10px;
+    font-style: italic;
+  }
+
+  #modalBodyDiv {
+      margin: 10px;
+      border: double rgb(209, 209, 155);
+  }
+
+  #modalBodyDiv p{
+    margin: 10px;
+}
+
+#modalBodyDiv ul{
+    margin: 20px;
+    padding-left: 50px;
+}
+
+.btn_default{
+    float: right;
+    font-style: italic;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+#apiDiv {
+    border: double rgb(209, 209, 155);
+    padding: 10px;
+    padding-left: 20px;
+}
+
+    #apiDiv input, #apiDiv button {
+        font-size: 25px;
+        color: rgb(37, 36, 36);
+    }
+
+    #yearInput{
+        width: 100px;
+    }
+
+    #apiDiv h4 {
+        margin: 10px;
+        font-style: italic;
+    }
+
+   
+
+    #apiDiv #message {
+        padding-top: 20px;
+    }
+
+        #apiDiv #message .resultDiv {
+            background: white;
+            display: inline-block;
+
+        }
+
+            
+
+            #apiDiv #message .resultDiv .result, .result2 {
+                width: 23%;
+                height: 300px;
+                padding: 30px;
+                float: left;
+                text-align: center;
+                cursor: pointer;
+            }
+
+                #apiDiv #message .resultDiv .result img, .result2 img {
+                    width: 60%;
+                }
+
+                #apiDiv #message .resultDiv .result p, .result2 p{
+                    margin: 0%;
+                }
+
+                    #apiDiv #message .resultDiv .result p a, .result2 p a{
+                        color: black;
+                        font-size: 20px;
+                        height: 100px;
+                    }
+
+                        #apiDiv #message .resultDiv .result p a:hover, .result2 p a:hover {
+                            text-decoration: underline;
+                        }
+
+
+
+
+#radio_head {
+    font-style: italic;
+    padding-left: 10px;
+}

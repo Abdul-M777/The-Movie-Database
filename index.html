@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>TMDB</title>
+</head>
+<body>
+    <header>
+    <h1>
+        TMDB
+    </h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div id="apiDiv">
+            <h4>Search for Movie or Person</h4>
+            <div id="radio_head">
+            <input type="radio" name="movie_person" value="movie" id="movie_btn">
+            <label for="movie_btn">Movie</label>
+            <input type="radio" name="movie_person" value="person" id="person_btn">
+            <label for="person_btn">Person</label>
+            </div>
+
+            <br>
+        <label for="search">Search</label>
+        <input type="text" name="search" id="search" placeholder="Search">
+
+        <label for="yearInput">Year</label>
+        <input type="number" name="year" id="yearInput" min="1800" max="3000" placeholder="Year">
+
+        <button id="btn_search">Search</button>
+
+        <div id="message"></div>
+
+    </div>
+</div>
+         <!--Modal-->
+         <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!--Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="modalTitleH4"></h4>
+                    </div>
+                    <div class="modal-body" id="modalBodyDiv">                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn_default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="copyright">
+        &#169 2021  Abdulmuaz Alshaikhli
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
