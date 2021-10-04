@@ -33,8 +33,10 @@ $(document).ready(function() {
         });
     }
 
+    
     $("#message").on("click", ".result", function () {
         var resourceId = $(this).attr("resourceId");
+        if($("input[name='movie_person']:checked").val() == "movie"){
         $.ajax({
             url: "https://api.themoviedb.org/3/movie/" + resourceId +"?"+ "api_key=dc662b7f1d2f741b834a79e3ebf185e5&append_to_response=credits",
         
@@ -87,10 +89,13 @@ $(document).ready(function() {
         },
 
         });
+        }
+
     });
 
     $("#message").on("click", ".result", function () {
         var resourceId = $(this).attr("resourceId");
+        if($("input[name='movie_person']:checked").val() == "person") {
         $.ajax({
             url: "https://api.themoviedb.org/3/person/" + resourceId+"?"+ "api_key=dc662b7f1d2f741b834a79e3ebf185e5&append_to_response=credits",
             
@@ -129,8 +134,8 @@ $(document).ready(function() {
             },
             
         });
+        }
     });
-
    
 
     function CallAPI2() {
