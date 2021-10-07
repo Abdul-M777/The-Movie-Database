@@ -1,10 +1,9 @@
 $(document).ready(function() {
+    // When clicking on the search button.
     $("#btn_search").click(function() {
     var movie_btn = $("input[name='movie_person']:checked").val();
-        console.log(movie_btn);
         var validate = Validate();
         $("#message").html(validate);
-        console.log(validate)
         if (validate.length == 0 && movie_btn == "movie") {
             CallAPI();
         } else if (validate.length == 0 && movie_btn == "person"){
@@ -12,6 +11,7 @@ $(document).ready(function() {
         }
 
     });
+    // Search for movie.
     function CallAPI() {
         $.ajax({
             url: "https://api.themoviedb.org/3/search/movie?api_key=dc662b7f1d2f741b834a79e3ebf185e5&query=" + $("#search").val()+"&primary_release_year="+$("#yearInput").val(),
@@ -33,7 +33,7 @@ $(document).ready(function() {
         });
     }
 
-    
+    // Clicking on a movie image.
     $("#message").on("click", ".result", function () {
         var resourceId = $(this).attr("resourceId");
         if($("input[name='movie_person']:checked").val() == "movie"){
@@ -93,6 +93,7 @@ $(document).ready(function() {
 
     });
 
+    // When clicking on a person image
     $("#message").on("click", ".result", function () {
         var resourceId = $(this).attr("resourceId");
         if($("input[name='movie_person']:checked").val() == "person") {
@@ -120,7 +121,7 @@ $(document).ready(function() {
                 }
                 
 
-                $("#modalBodyDiv").html(resultHtml);
+            $("#modalBodyDiv").html(resultHtml);
 
             $("#myModal").show();
 
@@ -138,6 +139,7 @@ $(document).ready(function() {
     });
    
 
+    // Search for person
     function CallAPI2() {
         $.ajax({
             url: "https://api.themoviedb.org/3/search/person?&query=" + $("#search").val(),
@@ -161,9 +163,10 @@ $(document).ready(function() {
     }
 
 
+    //Check if the input field is empty
     function Validate() {
         var errorMessage = "";
-        if ($("#search").val() == "" || $("input[name='movie_person']:checked").val() == null) {
+        if ($("#search").val().trim() == "" || $("input[name='movie_person']:checked").val() == null) {
             errorMessage += "Choose category and enter Movie or Person name";
         }
         return errorMessage;

@@ -165,3 +165,22 @@ footer#copyright {
     font-style: italic;
     padding-left: 10px;
 }
+
+@media only screen and (max-width: 800px) {
+    #search {
+        max-width: 100px;
+        margin: 10px;
+    }
+    #yearInput{
+        max-width: 50px;
+        margin: 10px;
+    }
+    #btn_search{
+        margin: 10px;
+        margin-left: 55px;
+    }
+    img {
+        height: 80px;
+        width: 200px;
+    }
+}
